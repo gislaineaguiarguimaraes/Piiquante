@@ -15,9 +15,6 @@ mongoose.connect('mongodb+srv://gislaine:70227589@cluster0.qpqtszo.mongodb.net/?
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
-app.use(helmet());
-app.use(cors())
-
 /* CORS - Permet d'accéder au front - lien entre les 2 serveurs grâce aux autorisations ci-dessous */
 app.use((req, res, next) => {
 res.setHeader('Access-Control-Allow-Origin', '*');
