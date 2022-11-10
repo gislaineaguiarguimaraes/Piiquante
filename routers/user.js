@@ -1,17 +1,17 @@
-const express = require('express')
+// On a besoin d'Express
+const express = require('express');
+
+// On crée un router avec la méthode mise à disposition par Express
 const router = express.Router();
 
+// On associe les fonctions aux différentes routes, on importe le controller
+const userCtrl = require('../controllers/user');
+const verifyPassword = require('../middleware/verifyPassword')
 
-const auth = require('../middleware/auth');
-const multer = require('../middleware/multer-config');
+// Chiffre le mot de passe de l'utilisateur, ajoute l'utilisateur à la base de données
+router.post('/signup', verifyPassword,  userCtrl.signup);
 
-const saucesCtrl = require('../controllers/sauce');
-
-router.get('/', auth, saucesCtrl.getAllSauce);
-router.post('/', auth, multer, saucesCtrl.createSauce);
-router.get('/:id', auth, saucesCtrl.getOneSauce);
-router.put('/:id', auth, multer, saucesCtrl.modifySauce);
-router.delete('/:id', auth, saucesCtrl.deleteSauce);
-router.post('/:id/like', auth, saucesCtrl.likeSauce);
+// Vérifie les informations d'identification de l'utilisateur
+router.post('/login', userCtrl.login);
 
 module.exports = router;
