@@ -1,56 +1,91 @@
-Projet 6 realisé pour la formation de Dev.Web. de Chez Openclassrooms.
-
-Introduction
+#  ![ laissé 100% ](https://github.com/thierry-laval/archives/blob/master/images/Logo_OpenClassrooms.png?raw=true) OpenClassrooms-Développeur Web
 
 
-node.js tout d'abord pour initialiser le repo;
 
-git, installation du repo sur github;
+##  Auteur
 
-express et mongoose pour mongoDB;
+👤    **Gislaine de Aguiar Guimaraes** 
 
-helmet, dotenv, multer;
+##  📎 Projet 6 - Construire une API sécurisée pour l'application d'avis gastronomiques So Pekocko
 
-bcrypt, Json Web Tokens (JWT)
+![ gauche 100% ](Instructions/logo.jpg)
+***
 
-piiquante est un site d'avis gastronomiques
-Nous pouvons ici poster des sauces : une route sauce est ajoutée avec un controller (un middleware);
+Le sujet du projet 6 du parcours Développeur web chez Openclassrooms porte sur le développement d'une application d'évaluation des sauces piquantes pour la marque "Piiquante". L'objectif étant de créer un MVP permettant aux utilisateurs d'ajouter leurs sauces préférées et de liker ou disliker les sauces ajoutées par les autres utilisateurs.
 
-Nous pouvons aussi y mettre des likes ou des dislikes;
+* 👀     Voir : [ Le projet sur OpenClassrooms ](https://openclassrooms.com/fr/projects/676/assignment "Cliquez pour voir le projet")
 
-Le site web est authentifiée par utilisateur et mot de passe (route auth);
+###  Contexte du projet
 
-Principaux modules courants de node.js utilisés ici
-Node.js
-Nous utilisons ici node.js pour construire le backend et ainsi ajouter les modules nécéssaires déja cités, et décrits plus bas.
+* Piiquante  est une entreprise familiale de 10 salariés.
+* Son activité principale est la création de sauces piquantes dont la composition est tenue secrète.
+* Forte de son succès, l'entreprise souhaite se développer et créer une application web, dans laquelle les utilisateurs pourront ajouter leurs sauces préférées et liker ou disliker les sauces proposées par les autres.
 
-Afin de lancer ce programme, si vous avez les clés du fichier .env (voire ensuite), vous devez disposer du frontend openclassrooms disponible sur https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
+####  Objectifs et Compétences attribuées
 
-Dans un terminal dans le dossier du frontend, lancez "npm start".
+***Le but est de créer le backend de l'application, le frontend étant déjà codé et fourni***
 
-Dans le dossier de ce backend, dans un terminal lancez "nodemon server", en ayant les clés stockées dans les variables d'environnement par mon biais. Sans cela vous n'aurez pas accès a mongoDB.
+* Implémenter un modèle logique de données conformément à la réglementation
+* Stocker des données de manière sécurisée
+* Mettre en œuvre des opérations CRUD de manière sécurisée
 
-Express()
-Nous utilisons express() pour la configuration du router. Express est un module de node.js et un framework JS. Express permet d'appliquer le CRUD à notre application.
+#####  API REST
 
-Mongoose
-Mongoose facilite la communication avec une base de donnée mongoDB ; mongoose est conçu pour node.js dont il est un module. Créer un schéma, appliquer le CRUD avec notre base de donnée, tout est possible avec Mongoose. Utilisation de dotenv pour securiser l'acces a mongoDB.
+* Sécurité **OWASP** et **RGPD**
 
-Multer
-Multer récupère et stocke sur le serveur les fichiers envoyés par les utilisateurs. Ici, il est configuré de manière à stocker dans le dossier images/ les images de sauces proposées par chaque utilisateur.
+***
 
-modules de sécurité sur node.js
-Dotenv
-Dotenv permet de travailler avec des variables d'environnement et sécuriser les mots de passe d'un backend node.js.
 
-Helmet
-Helmet permet a l'application de respecter les recommandations OWASP.
+####  Dépôt des contenus de ce repository
 
-JWT : JSON Web Tokens
-JWT est un module node.js qui permet de crypter les tokens d'authentification envoyés au client pour authentifier leur session, selon une clé définie par le développeur. Cette clé est généralement stockée dans le fichier .env.
+* Si besoin, vous pouvez trouver le Frontend séparément sur [ github ](https://github.com/OpenClassrooms-Student-Center/dwj-projet6).
 
-bcrypt
-Bcrypt permet de faire un "hash" du mot de passe du client, de maniere a ce que cette chaine de caractère ne soit pas stockées coté serveur (mais seulement ce hash). Ainsi lorsque l'utilisateur se connecte avec son mot de passe, ce mot de passe est de nouveau haché et comparé au hash du serveur. Si les deux hash viennent du même mot de passe, les hash se reconnaitront.
+***
 
-Email-validator et password-validator
-https://github.com/manishsaraan/email-validator pour email-validator et https://github.com/tarunbatra/password-validator pour password-validator. Les détails de l'implémentation de ces modules sont sur leur page github.
+###  🔨   Installation
+
+* Cloner ce projet depuis GitHub.
+
+####  💡   Faire tourner le Frontend
+
+* Ouvrir le terminal sur ce dossier et effectuer   `npm install` pour installer les dépendances.
+* Exécuter `npm install node-sass` pour installer sass.
+* Le projet a été généré avec Angular CLI version 7.0.2.
+* Démarrer ng serve (ou `npm start` ) pour avoir accès au serveur de développement.
+* Rendez-vous sur `http://localhost:4200` .
+* L'application va se recharger automatiquement si vous modifiez un fichier source.
+
+####  💡   Faire tourner le Backend
+
+* Ouvrir le terminal sur ce dossier.
+* Pour utiliser le serveur, chargez le package nodemon : `npm install -g nodemon` .
+* Puis lancez le serveur : `nodemon server` .
+
+####  Pour faire court
+
+Si les packages sont déjà installés, ces commandes suffisent à démarrer les serveurs.
+
+*  `npm start` via le terminal sur le frontend
+*  `nodemon server` via le terminal sur le backend
+* Se connecter à l'url : `http://localhost:4200`
+
+#####  🖥   Rapport
+
+* Ouvrir [ localhost:4200 ](http://localhost:4200/) dans votre navigateur.
+* Pour s'inscrire sur l'application, l'utilisateur doit fournir un email et un mot de passe contenant 08 caractères minimum (dont 1 majuscule, 1 minuscule, 1 chiffre, pas de symbole, espaces autorisés).
+
+***
+
+####  📦     Utilisé dans ce projet
+
+| Technologies | et outils |
+|:-----------------------:|:------------------:|
+| Cadre : Express | Code Visual Studio |
+| Serveur : NodeJS | Git/GitHub |
+| Base de données : MongoDB | Mangouste |
+| Javascript | xXx |
+
+* Hébergement sur MongoDB Atlas
+* Toutes les opérations de la base de données utilisent le pack Mongoose avec des schémas de données stricts.
+
+***
