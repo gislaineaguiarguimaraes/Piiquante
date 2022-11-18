@@ -8,8 +8,7 @@
 
 ##  📎 Projet 6 - Construire une API sécurisée pour l'application d'avis gastronomiques So Pekocko
 
-![ gauche 100% ](Instructions/logo.jpg)
-***
+
 
 Le sujet du projet 6 du parcours Développeur web chez Openclassrooms porte sur le développement d'une application d'évaluation des sauces piquantes pour la marque "Piiquante". L'objectif étant de créer un MVP permettant aux utilisateurs d'ajouter leurs sauces préférées et de liker ou disliker les sauces ajoutées par les autres utilisateurs.
 
